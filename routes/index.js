@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var mongoUrl = 'mongodb://localhost:27017/meaieeeias';
+var mongoUrl = 'mongodb://localhost:27017/ias';
 //var MongoStore = require('connect-mongo');
 var mongo = require('../mongo');
 var assert = require('assert');
@@ -19,10 +19,10 @@ var mm = today.getMonth()+1; //January is 0!
 var yyyy = today.getFullYear();
 if(dd<10) {
     dd='0'+dd
-} 
+}
 if(mm<10) {
     mm='0'+mm
-} 
+}
 today = yyyy+'-'+mm+'-'+dd;
 
 function getUpdates(){
@@ -36,7 +36,7 @@ function getUpdates(){
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { 
+  res.render('index', {
       title: 'IEEE IAS Chapter',
       college: 'MEA Engineering College',
       page: 'Home'
@@ -44,7 +44,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/home', function(req, res, next) {
-  res.render('index', { 
+  res.render('index', {
       title: 'IEEE IAS Chapter',
       college: 'MEA Engineering College',
       page: 'Home'
@@ -52,7 +52,7 @@ router.get('/home', function(req, res, next) {
 });
 
 router.get('/index', function(req, res, next) {
-  res.render('index', { 
+  res.render('index', {
       title: 'IEEE IAS Chapter',
       college: 'MEA Engineering College',
       page: 'Home'
@@ -60,7 +60,7 @@ router.get('/index', function(req, res, next) {
 });
 //routing for about section
 router.get('/about', function(req, res, next) {
-  res.render('about', { 
+  res.render('about', {
       title: 'IEEE IAS Chapter',
       college: 'MEA Engineering College',
       page: 'About'
@@ -68,7 +68,7 @@ router.get('/about', function(req, res, next) {
 });
 
 router.get('/about/ieee', function(req, res, next) {
-  res.render('about-ieee', { 
+  res.render('about-ieee', {
       title: 'IEEE IAS Chapter',
       college: 'MEA Engineering College',
       page: 'About IEEE'
@@ -76,7 +76,7 @@ router.get('/about/ieee', function(req, res, next) {
 });
 
 router.get('/about/ias', function(req, res, next) {
-  res.render('about-ias', { 
+  res.render('about-ias', {
       title: 'IEEE IAS Chapter',
       college: 'MEA Engineering College',
       page: 'About IAS'
@@ -84,7 +84,7 @@ router.get('/about/ias', function(req, res, next) {
 });
 
 router.get('/about/region10', function(req, res, next) {
-  res.render('about-region10', { 
+  res.render('about-region10', {
       title: 'IEEE IAS Chapter',
       college: 'MEA Engineering College',
       page: 'About Region 10'
@@ -92,7 +92,7 @@ router.get('/about/region10', function(req, res, next) {
 });
 
 router.get('/about/mea', function(req, res, next) {
-  res.render('about-mea', { 
+  res.render('about-mea', {
       title: 'IEEE IAS Chapter',
       college: 'MEA Engineering College',
       page: 'About MEA Engineering College'
@@ -100,7 +100,7 @@ router.get('/about/mea', function(req, res, next) {
 });
 
 router.get('/about/sb', function(req, res, next) {
-  res.render('about-sb', { 
+  res.render('about-sb', {
       title: 'IEEE IAS Chapter',
       college: 'MEA Engineering College',
       page: 'About MEA IEEE Student Branch'
@@ -108,7 +108,7 @@ router.get('/about/sb', function(req, res, next) {
 });
 
 router.get('/about/chapter', function(req, res, next) {
-  res.render('about-chapter', { 
+  res.render('about-chapter', {
       title: 'IEEE IAS Chapter',
       college: 'MEA Engineering College',
       page: 'About MEA IEEE IAS Chapter'
@@ -118,7 +118,7 @@ router.get('/about/chapter', function(req, res, next) {
 //routing for about section ends
 
 router.get('/membership-join', function(req, res, next) {
-  res.render('membership-join', { 
+  res.render('membership-join', {
       title: 'IEEE IAS Chapter',
       college: 'MEA Engineering College',
       page: 'Membership and Join'
@@ -126,7 +126,7 @@ router.get('/membership-join', function(req, res, next) {
 });
 
 router.get('/news', function(req, res, next) {
-  res.render('news', { 
+  res.render('news', {
       title: 'IEEE IAS Chapter',
       college: 'MEA Engineering College',
       page: 'News and Updates'
@@ -141,7 +141,7 @@ router.get('/events', function(req, res, next) {
       res.send('error');
       //throw error;
     }
-    res.render('events', { 
+    res.render('events', {
         title: 'IEEE IAS Chapter',
         college: 'MEA Engineering College',
         page: 'All Events',
@@ -156,17 +156,18 @@ router.get('/event/:eventid', function(req, res, next) {
       res.send('error');
       //throw error;
     }
-    res.render('event-single', { 
+    res.render('event-single', {
         title: 'IEEE IAS Chapter',
         college: 'MEA Engineering College',
-        page: 'All Events',
+        page: req.query['name'] + ' - Event',
+				name: req.query['name'],
         eventList: documents
     });
   });
 });
 
 router.get('/events/page/:pageid', function(req, res, next) {
-  res.render('events-sort', { 
+  res.render('events-sort', {
       title: 'IEEE IAS Chapter',
       college: 'MEA Engineering College',
       page: 'All Events'
@@ -180,7 +181,7 @@ router.get('/events/upcoming', function(req, res, next) {
       res.send('error');
       //throw error;
     }
-    res.render('events-upcoming', { 
+    res.render('events-upcoming', {
         title: 'IEEE IAS Chapter',
         college: 'MEA Engineering College',
         page: 'Upcoming Events',
@@ -196,27 +197,20 @@ router.get('/events/:year', function(req, res, next) {
       res.send('error');
       //throw error;
     }
-    res.render('events-year', { 
+    res.render('events-year', {
         title: 'IEEE IAS Chapter',
         college: 'MEA Engineering College',
         page: 'Events held in '.concat(req.params.year),
-        eventList: documents
+        eventList: documents,
+				year: year
     });
-  });
-});
-
-router.get('/events/event/:event_id', function(req, res, next) {
-  res.render('events-single', { 
-      title: 'IEEE IAS Chapter',
-      college: 'MEA Engineering College',
-      page: req.params.event_id.concat(' | Event')
   });
 });
 
 //routing for events ends
 
 router.get('/members', function(req, res, next) {
-  res.render('members', { 
+  res.render('members', {
       title: 'IEEE IAS Chapter',
       college: 'MEA Engineering College',
       page: 'Members of our Chapter'
@@ -236,7 +230,7 @@ router.get('/gallery', function(req, res, next) {
         title: 'IEEE IAS Chapter',
         college: 'MEA Engineering College',
         page: 'Gallery',
-        gallery: documents      
+        gallery: documents
       });
   });
 });
@@ -244,7 +238,7 @@ router.get('/gallery', function(req, res, next) {
 //routing for gallery ends
 
 router.get('/contact', function(req, res, next) {
-  res.render('contact', { 
+  res.render('contact', {
       title: 'IEEE IAS Chapter',
       college: 'MEA Engineering College',
       page: 'Contact',
@@ -253,7 +247,7 @@ router.get('/contact', function(req, res, next) {
 });
 
 router.get('/login', function(req, res, next) {
-  res.render('dashboard/login', { 
+  res.render('dashboard/login', {
       title: 'IEEE IAS Chapter',
       college: 'MEA Engineering College',
       page: 'Dashboard Login'

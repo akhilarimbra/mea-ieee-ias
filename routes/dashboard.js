@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var expressSession = require('express-session');
 var expressHbs = require('express3-handlebars');
-var mongoUrl = 'mongodb://localhost:27017/meaieeeias';
+var mongoUrl = 'mongodb://localhost:27017/ias';
 var MongoStore = require('connect-mongo')(expressSession);
 var mongo = require('../mongo');
 var assert = require('assert');
@@ -41,12 +41,12 @@ function checkIfLoggedIn(req, res, next){
         // so that the 'requireUser' middleware can check if the user is
         // logged in
         req.user = user;
-        
+
         // Set a res.locals variable called 'user' so that it is available
         // to every handlebars template.
         res.locals.user = user;
       }
-      
+
       next();
     });
   } else {
@@ -86,7 +86,7 @@ function createEvent(id, name, short, img, report, date, year, callback){
       date: date,
       year: year
     };
-    
+
     // make sure this id does not exist already
     coll.findOne(query, function(err, user){
       if (user) {
@@ -152,7 +152,7 @@ router.post('/event/edit/:id', requireUser, function(req, res){
   var date = req.body.date;
   var short = req.body.short;
   var img = req.body.img;
-  var report = req.body.img;
+  var report = req.body.report;
   var col = mongo.collection('events');
   col.updateOne({id: id}, {$set: {name: name}});
   col.updateOne({id: id}, {$set: {year: year}});
@@ -226,7 +226,7 @@ router.post('/event/add', requireUser,function(req, res){
   var date = req.body.date;
   var year = req.body.year;
   var report = req.body.report;
-  
+
   createEvent(id, name, short, img, report, date, year, function(err, user){
     if (err) {
       res.render('dashboard/event-add', {
@@ -241,7 +241,7 @@ router.post('/event/add', requireUser,function(req, res){
         page: 'Add Event - Dashboard'
       });
     } else {
-      res.redirect('/dashboard/event/view');  
+      res.redirect('/dashboard/event/view');
     }
   });
 });
@@ -260,7 +260,7 @@ function renameFile(name,rename){
       if ( err ) {
         console.log('ERROR: ' + err);
       }
-  });  
+  });
 }
 
 function renameGalleryFile(name,rename){
@@ -268,7 +268,7 @@ function renameGalleryFile(name,rename){
       if ( err ) {
         console.log('ERROR: ' + err);
       }
-  });  
+  });
 }
 
 router.post('/images/add', requireUser, multer({ dest: '../public/uploads/'}).single('upl'), function(req,res){
@@ -365,14 +365,14 @@ router.get('/signup', function(req,res){
 /*
 function createUser(username, password, password_confirmation, callback){
   var coll = mongo.collection('users');
-  
+
   if (password !== password_confirmation) {
     var err = 'The passwords do not match';
     callback(err);
   } else {
     var query      = {username:username};
     var userObject = {username: username, password: password};
-    
+
     // make sure this username does not exist already
     coll.findOne(query, function(err, user){
       if (user) {
@@ -395,16 +395,16 @@ router.post('/signup', function(req, res){
   var username = req.body.username;
   var password = req.body.password;
   var password_confirmation = req.body.password_confirmation;
-  
+
   createUser(username, password, password_confirmation, function(err, user){
     if (err) {
       res.render('signup', {error: err});
     } else {
-      
+
       // This way subsequent requests will know the user is logged in.
       req.session.username = user.username;
-      
-      res.redirect('/');  
+
+      res.redirect('/');
     }
   });
 });
@@ -414,7 +414,7 @@ router.post('/signup', function(req, res){
 // were given.
 function authenticateUser(username, password, callback){
   var coll = mongo.collection('users');
-  
+
   coll.findOne({username: username, password:password}, function(err, user){
     callback(err, user);
   });
@@ -425,7 +425,7 @@ router.post('/login', function(req, res){
   // the views/login.hbs page
   var username = req.body.username;
   var password = req.body.password;
-  
+
   authenticateUser(username, password, function(err, user){
     if (user) {
       // This way subsequent requests will know the user is logged in.

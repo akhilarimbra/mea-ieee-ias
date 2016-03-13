@@ -1,0 +1,27 @@
+<!-- Title -->
+<div class="row">
+  <div class="col-lg-6">
+    <h2>{{page}}</h2>
+  </div>
+  <div class="col-lg-6">
+    <ol class="breadcrumb" style='float:right;'>
+      <li><a href="/">Home</a></li>
+      <li><a href="/events">Event</a></li>
+      <li class='active'>{{name}}</li>
+    </ol>
+  </div>
+</div>
+<br>
+<!-- Title Ends -->
+<div class="row">
+<div class='col-lg-12'>
+  <img src="{{#each eventList}}{{img}}{{/each}}" alt="{{name}}" width="100%">
+  <br>
+  {{#each eventList}}
+  <h3 class="article-title">{{short}}</h3>
+  <p class="sidebar-text">
+    {{report}}
+  </p>
+  {{/each}}
+</div>
+</div>

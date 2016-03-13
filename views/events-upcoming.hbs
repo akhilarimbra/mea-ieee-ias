@@ -6,14 +6,17 @@
   <div class="col-lg-6">
     <ol class="breadcrumb" style='float:right;'>
       <li><a href="/">Home</a></li>
-      <li class='active'>Events</li>
-    </ol>   
+      <li><a href="/events">Events</a></li>
+      <li class='active'>Upcoming</li>
+    </ol>
   </div>
 </div>
+<br>
+<p></p>
 <!-- Title Ends -->
 <div class="row">
 {{#each eventList}}
-<a href='/event/{{id}}'>
+<a href='/event/{{id}}?name={{name}}'>
     <div class="col-lg-3">
          <img width='100%' src='{{img}}'></img>
          <h4>{{name}}</h4>
