@@ -25,6 +25,15 @@ if(mm<10) {
 } 
 today = yyyy+'-'+mm+'-'+dd;
 
+function getUpdates(){
+  var gallery = mongo.collection("updates").find().toArray(function(error, documents) {
+    if(error){
+      throw error;
+    }
+    return documents;
+  });
+}
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { 
@@ -108,11 +117,11 @@ router.get('/about/chapter', function(req, res, next) {
 
 //routing for about section ends
 
-router.get('/membership', function(req, res, next) {
-  res.render('membership', { 
+router.get('/membership-join', function(req, res, next) {
+  res.render('membership-join', { 
       title: 'IEEE IAS Chapter',
       college: 'MEA Engineering College',
-      page: 'Membership Benefits and how to Join IAS'
+      page: 'Membership and Join'
   });
 });
 
