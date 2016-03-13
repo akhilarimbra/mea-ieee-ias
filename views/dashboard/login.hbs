@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-lg-4"></div>
+    <div class="col-lg-4">
+        <h3 align='center' style='color:green;'>Please Login to Continue</h3>
+        <form name='login-form' id='login-form' method='post' action='/dashboard/login'>
+          <div class="form-group">
+            <input type="text" class="form-control" name='username' required id="exampleInputEmail1" placeholder="Enter your username">
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" name='password' required id="exampleInputPassword1" placeholder="Enter your password">
+          </div>
+          <button type="submit" class="btn btn-default">Login</button>
+        </form> 
+        {{#if badCredentials}}
+        <h3 style='color:red'>The login information you entered is not correct.</h3>
+        {{/if}}
+    </div>
+    <div class="col-lg-4"></div>
+</div>

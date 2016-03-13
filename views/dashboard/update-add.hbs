@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="col-lg-6">
+    <ol class="breadcrumb" style='float:left;'>
+      <li><i class="fa fa-user"></i> {{username}}</li>
+    </ol>  
+  </div>
+  <div class="col-lg-6">
+    <ol class="breadcrumb" style='float:right;'>
+      <li><a href="/dashboard/logout">Logout <i class="fa fa-sign-out"></i></a></li>
+    </ol>   
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-3">
+    <h4><a href='/dashboard/updates/add'>Add Update</a></h4>
+    <h4><a href='/dashboard/event/add'>Add Event</a></h4>
+    <h4><a href='/dashboard/event/view'>View Events</a></h4>
+    <h4><a href='/dashboard/gallery/add'>Add Gallery</a></h4>
+    <h4><a href='/dashboard/images/add'>Add Image</a></h4>
+    <h4><a href='/dashboard/images'>View Image</a></h4>
+  </div>
+  <div class="col-lg-9">
+  <h3 class="article-title">{{page}}</h3>
+  {{#if error}}
+    <br>
+    <h3 style='color:red'>{{error}}</h3>
+  {{/if}}
+  <form name='login-form' id='login-form' method='post' action='/dashboard/updates/add'>
+    <div class="form-group">
+      <label>Enter text for the new update below.</label>
+      <input type="text" class="form-control" name='text' id="text" {{#if name}}value='{{name}}'{{/if}} placeholder="Enter name of the Event" required>
+    </div>
+    <button type="submit" class="button">Add Update</button>
+  </form>
+  </div>
+</div>

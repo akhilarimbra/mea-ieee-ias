@@ -1,0 +1,311 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  color: green;
+  text-align: justify;
+  background-color: white;
+  padding: 0em;
+}
+
+a:hover {
+  color: green;
+}
+
+a{
+  color: #008CBA;
+}
+
+.footer-text > a{
+  color: lightblue;
+}
+
+#main-container{
+  padding: 0em;
+  /*border-style: groove;
+  border-color: blue;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+  background-color: white;
+}
+
+#topnav{
+  /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+  background-color: #008CBA;
+  border: none;
+  border-radius: none;
+  padding-right: .5em;
+}
+
+.icon-bar{
+  background-color: lightblue;
+}
+
+.fa-arrow-left,.fa-arrow-right,.fa-hand-o-left,.fa-hand-o-right{
+  color: #00B7FF;
+}
+
+marquee{
+  color: white;
+}
+
+h1,h3,h4,h5,h6{
+  color: black;
+}
+
+#update-scroll{
+  /*
+  border-style: solid;
+  border-color: green;
+  */
+}
+
+p{
+  color: green;
+}
+
+.polaroid {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+
+#container > h5 > b{
+  color: #008CBA;
+}
+
+#container{
+  padding-bottom: .2em;
+}
+
+#content{
+  border-right-style: solid;
+  border-right-color: white;
+}
+
+.sidebar-text{
+  color: grey;
+}
+
+.sidebar-title{
+  border-bottom: solid;
+  border-color: green;
+}
+
+.footer-title{
+  color: lightblue;
+  border-bottom-style: solid;
+  border-bottom-color: #33cc33;
+}
+
+.button2 {
+    background-color: #33cc33;
+    border-bottom-color: #33cc33;
+    border-top-color: #33cc33;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    color: white;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    font-size: 1em;
+    padding: 15px;
+}
+
+.button2:hover{
+  background-color: lightblue;
+  border-bottom-color: lightblue;
+  border-top-color: lightblue;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  color: #33cc33;
+}
+
+.button {
+  background-color: #008CBA; /* Green */
+  border: none;
+  color: white;
+  padding: 15px;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.button:hover{
+  background-color: #33cc33;
+}
+
+.button3 {
+  background-color: #33cc33;
+  border: none;
+  color: white;
+  padding: 15px;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.button3:hover{
+  color: #008CBA;
+}
+
+.footer-text{
+  color: white;
+}
+
+/*
+.footer-text{
+  color: white;
+}
+
+.footer-title{
+  color: white;
+  border-bottom: solid;
+  border-color: white;
+}
+*/
+
+.carousel-caption,.carousel-caption > h1,.carousel-caption > p{
+  color: white;
+}
+
+#ieeelogo{
+  height: 1.4em;
+}
+
+#footerlinks > li > a{
+  color : grey;
+  font-size: 1em;
+}
+
+#marqueescroll{
+  background-color: #33cc33;
+  color: white;
+  padding-top: .7em;
+  padding-bottom: .7em;
+}
+
+#bottom-widget{
+  background-color: #008CBA;
+}
+
+
+#footerlinks > li > a:hover{
+  color : green;
+  background-color: white;
+}
+
+.topnavlinks > li > a{
+  color: white;
+}
+
+.topnavlinks > li > a:hover{
+  color: #33cc33;
+  background-color: #008CBA;
+}
+
+.fa-phone:hover{
+  color: #008CBA; 
+}
+
+.fa-phone{
+  color: #008CBA; 
+}
+
+.article-title{
+  border-bottom: solid;
+  border-color: green;
+}
+
+p{
+  color: grey;
+}
+
+.fa-globe,.fa-compass,.fa-info-circle,.fa-university
+,.fa-phone,.fa-map-marker{
+  color:green;
+}
+
+.dropdown:hover .dropdown-menu {
+  background-color: #008CBA;
+  display: block;
+}
+
+.dropdown-menu > li > a{
+  color: white;
+  background-color: #008CBA;
+  border: none;
+  border-radius: none;
+  box-shadow: none;
+}
+
+.dropdown-menu > li > a:hover{
+  color: #33cc33;
+  background-color: #008CBA;
+  font-weight: bold;
+}
+
+.breadcrumb{
+  background-color: white;
+}
+
+.fa-coffee{
+  color: brown;
+}
+
+h2{
+  color: #008CBA;
+}
+
+.nav-stacked > li > a{
+  color: white;
+  background-color: #008CBA;
+}
+
+.nav-stacked > li > a:hover{
+  color: white;
+  background-color: green;
+}
+
+pre{
+  color: green;
+  background-color: white;
+  border: none;
+}
+
+th{
+  color: black;
+}
+
+td{
+  color: #008CBA;
+}
+
+#navbottom{
+  padding-bottom: none;
+}
+
+.navbar-static-bottom{
+  padding-right: .5em;
+}
+
+.fa-facebook-square,.fa-envelope-o,.fa-twitter-square,.fa-google-plus-square{
+  color: white;
+  font-size: 5em;
+}
+
+.fa-facebook-square:hover,.fa-envelope-o:hover,.fa-twitter-square:hover,.fa-google-plus-square:hover{
+  color: #33cc33;
+}
+
+.header-main{
+  color: black;
+}
+
+.header-sub{
+  color: grey;
+}
+
+#contactmain > .form-group > .textfield{
+  border-radius: 0;
+  border-color: lightblue;
+}

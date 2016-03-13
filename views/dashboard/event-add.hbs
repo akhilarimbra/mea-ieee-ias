@@ -1,0 +1,68 @@
+<div class="row">
+  <div class="col-lg-6">
+    <ol class="breadcrumb" style='float:left;'>
+      <li><i class="fa fa-user"></i> {{username}}</li>
+    </ol>  
+  </div>
+  <div class="col-lg-6">
+    <ol class="breadcrumb" style='float:right;'>
+      <li><a href="/dashboard/logout">Logout <i class="fa fa-sign-out"></i></a></li>
+    </ol>   
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-3">
+    <h4><a href='/dashboard/updates/add'>Add Update</a></h4>
+    <h4><a href='/dashboard/event/add'>Add Event</a></h4>
+    <h4><a href='/dashboard/event/view'>View Events</a></h4>
+    <h4><a href='/dashboard/gallery/add'>Add Gallery</a></h4>
+    <h4><a href='/dashboard/images/add'>Add Image</a></h4>
+    <h4><a href='/dashboard/images'>View Image</a></h4>
+  </div>
+  <div class="col-lg-9">
+  <h3 class="article-title">Add a New Event</h3>
+  {{#if error}}
+    <br>
+    <h3 style='color:red'>{{error}}</h3>
+  {{/if}}
+  <form name='login-form' id='login-form' method='post' action='/dashboard/event/add'>
+    <div class="form-group">
+      <label>Enter name of the event</label>
+      <input type="text" class="form-control" name='name' id="name" {{#if name}}value='{{name}}'{{/if}} placeholder="Enter name of the Event" required>
+    </div>
+    <div class="form-group">
+      <label>Give an unique id for the event</label>
+      <input type="text" class="form-control" name='id' id="id" {{#if id}}value='{{id}}'{{/if}} placeholder="Enter an id of the event" required>
+    </div> 
+    <div class="form-group">
+      <label>Enter the image link to be used as the thumbnail for the event</label>
+      <input type="text" class="form-control" name='img' id="img" {{#if img}}value='{{img}}'{{/if}} placeholder="Enter the link of the thumbnail image" required>
+    </div>
+    <div class="form-group">
+      <label>Please give a short description about the event</label>
+      <input type="text" class="form-control" name='short' id="short" {{#if short}}value='{{short}}'{{/if}} placeholder="Enter a short description of the event" required>
+    </div>
+    <div class="form-group">
+      <label>Select the year of the event</label>
+      <select class='form-control' name='year' id='year'>
+        <option>2014</option>
+        <option>2015</option>
+        <option>2016</option>
+        <option>2017</option>
+        <option>2018</option>
+        <option>2019</option>
+        <option>2020</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Select date of the event</label>
+      <input type="date" class="form-control" name='date' {{#if date}}value='{{date}}'{{/if}} id="date" required>
+    </div>
+    <div class="form-group">
+      <label>Please give an entire report for the event</label>
+      <textarea id='report' name='report' id='report' class="form-control" rows="30" placeholder='Enter report of the event' required>{{#if report}}{{report}}{{/if}}</textarea>
+    </div>    
+    <button type="submit" class="button">Add Event</button>
+  </form>
+  </div>
+</div>

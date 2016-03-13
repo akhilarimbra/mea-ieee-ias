@@ -1,0 +1,24 @@
+<!-- Title -->
+<div class="row">
+  <div class="col-lg-6">
+    <h2>{{page}}</h2>
+  </div>
+  <div class="col-lg-6">
+    <ol class="breadcrumb" style='float:right;'>
+      <li><a href="/">Home</a></li>
+      <li class='active'>Events</li>
+    </ol>   
+  </div>
+</div>
+<!-- Title Ends -->
+<br>
+<p></p>
+<div class="row">
+{{#each gallery}}
+    <div class="col-lg-3">
+          <a href='{{img}}' target='blank'>
+           <img width='100%' src='{{img}}'></img>
+          </a>
+    </div>
+{{/each}}
+</div>

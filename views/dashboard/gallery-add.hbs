@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-lg-6">
+    <ol class="breadcrumb" style='float:left;'>
+      <li><i class="fa fa-user"></i> {{username}}</li>
+    </ol>  
+  </div>
+  <div class="col-lg-6">
+    <ol class="breadcrumb" style='float:right;'>
+      <li><a href="/dashboard/logout">Logout <i class="fa fa-sign-out"></i></a></li>
+    </ol>   
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-3">
+    <h4><a href='/dashboard/updates/add'>Add Update</a></h4>
+    <h4><a href='/dashboard/event/add'>Add Event</a></h4>
+    <h4><a href='/dashboard/event/view'>View Events</a></h4>
+    <h4><a href='/dashboard/gallery/add'>Add Gallery</a></h4>
+    <h4><a href='/dashboard/images/add'>Add Image</a></h4>
+    <h4><a href='/dashboard/images'>View Image</a></h4>
+  </div>
+  <div class="col-lg-9">
+  <h3 class="article-title">{{page}}</h3>
+  {{#if error}}
+    <br>
+    <h3 style='color:red'>{{error}}</h3>
+  {{/if}}
+  <form method="post" action="/dashboard/gallery/add" enctype="multipart/form-data">
+    <p>Select an image file (JPEG only) <input type="file" name="upl" accept="image/*"/></p>
+    <p><input type="submit" value="Upload"></p>
+  </form>
+  </div>
+</div>

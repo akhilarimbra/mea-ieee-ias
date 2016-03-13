@@ -1,0 +1,26 @@
+<!-- Title -->
+<div class="row">
+  <div class="col-lg-6">
+    <h2>{{page}}</h2>
+  </div>
+  <div class="col-lg-6">
+    <ol class="breadcrumb" style='float:right;'>
+      <li><a href="/">Home</a></li>
+      <li class='active'>Events</li>
+    </ol>   
+  </div>
+</div>
+<br>
+<p></p>
+<!-- Title Ends -->
+<div class="row">
+{{#each eventList}}
+<a href='/event/{{id}}'>
+    <div class="col-lg-3">
+         <img width='100%' src='{{img}}'></img>
+         <h4>{{name}}</h4>
+         <h5><i class="fa fa-calendar"></i> {{date}}</h5>
+    </div>
+</a>
+{{/each}}
+</div>
