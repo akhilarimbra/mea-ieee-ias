@@ -178,7 +178,7 @@ p{
 }
 
 #marqueescroll{
-  background-color: #33cc33;
+  background-color: #008CBA;
   color: white;
   padding-top: .7em;
   padding-bottom: .7em;
@@ -204,11 +204,11 @@ p{
 }
 
 .fa-phone:hover{
-  color: #008CBA; 
+  color: #008CBA;
 }
 
 .fa-phone{
-  color: #008CBA; 
+  color: #008CBA;
 }
 
 .article-title{
