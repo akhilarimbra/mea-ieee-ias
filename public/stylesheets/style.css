@@ -4,7 +4,7 @@ body {
   color: green;
   text-align: justify;
   background-color: white;
-  padding: 0em;
+  padding-top: 4.5em;
 }
 
 a:hover {
@@ -20,7 +20,6 @@ a{
 }
 
 #main-container{
-  padding: 0em;
   /*border-style: groove;
   border-color: blue;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
@@ -32,7 +31,7 @@ a{
   background-color: #008CBA;
   border: none;
   border-radius: none;
-  padding-right: .5em;
+  padding-right: .7em;
 }
 
 .icon-bar{
@@ -169,7 +168,7 @@ p{
 }
 
 #ieeelogo{
-  height: 1.4em;
+  height: 1.5em;
 }
 
 #footerlinks > li > a{
@@ -180,8 +179,8 @@ p{
 #marqueescroll{
   background-color: #008CBA;
   color: white;
-  padding-top: .7em;
-  padding-bottom: .7em;
+  padding-top: .5em;
+  padding-bottom: .5em;
 }
 
 #bottom-widget{
@@ -308,4 +307,18 @@ td{
 #contactmain > .form-group > .textfield{
   border-radius: 0;
   border-color: lightblue;
+}
+
+#bottomnav{
+  background-color: #008CBA;
+  padding-top: .2em;
+}
+
+#footerlinks > li > a{
+  color: white;
+}
+
+#footerlinks > li > a:hover{
+  color: lightblue;
+  background-color: #008CBA;
 }

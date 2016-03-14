@@ -1,3 +1,4 @@
+<!DOCTYPE>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -20,7 +21,7 @@
     <![endif]-->
   </head>
   <body>
-          <nav class="navbar navbar-static-top" id='topnav'>
+          <nav class="navbar navbar-fixed-top" id='topnav'>
               <!-- Brand and toggle get grouped for better mobile display -->
               <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -34,7 +35,7 @@
               <!-- Collect the nav links, forms, and other content for toggling -->
               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav topnavlinks">
-                  <li><a style='color:white;'><i class="fa fa-phone" style='color: white;'></i> 04933-203079</a></li>
+                  <li><a style='color:white;'><i class="fa fa-phone" style='color: white;'></i> +91 8129609230</a></li>
                   <li><a href='mailto:meaieeestudentbranch@gmail.com' target="_blank"><i class="fa fa-envelope"></i></a></li>
                   <li><a href='http://facebook.com/meaieee' target="_blank"><i class="fa fa-facebook"></i></a></li>
                   <li><a href='http://twitter.com/meaieee' target="_blank"><i class="fa fa-twitter"></i></a></li>
@@ -79,7 +80,7 @@
         </nav>
       </div-->
       <!-- Header -->
-      <header class="row">
+      <header class="row" id='logo'>
         <div class="container-fluid" id="header">
         <div class="col-lg-6" id='headerleft'>
             <img src='/images/header.jpg' class="img-responsive" style="float:left;height:106;">
@@ -176,6 +177,26 @@
     <div class="row" id='bottom-widget'>
       <div class="container-fluid">
         <div class="col-lg-3 col-md-3">
+          <h3 class="footer-title">About MEA IEEE SB</h3>
+          <p class="footer-text">
+            MEA Engineering College IEEE SB<br>
+            STB : 08091<br>
+            Kerala Sub-Section<br>
+            Region 10<br>
+            India<br>
+            info@meaieeesb.org<br>
+            +91 8129609230
+          </p>
+        </div>
+        <div class="col-lg-3 col-md-3">
+          <h3 class="footer-title">About MEA</h3>
+          <p class="footer-text">
+            <a href='http://web.meaec.edu.in/' style='font-style:bold;color:white;' target='_blank'>MEAEC</a>, the second self financing engineering college in Malappuram district,
+            is committed to provide excellent and value-based education with a flair for ethics and professionalism.
+            The Management has no motive of making profit from the College but aims at creating a Center of Excellence in Engineering and Technology.
+          </p>
+        </div>
+        <div class="col-lg-3 col-md-3">
           <h3 class="footer-title">Get in Touch with us</h3>
           <div class="row">
             <div class="col-sm-3">
@@ -193,26 +214,6 @@
           </div>
         </div>
         <div class="col-lg-3 col-md-3">
-          <h3 class="footer-title">About MEA IEEE SB</h3>
-          <p class="footer-text">
-            MEA Engineering College IEEE SB<br>
-            STB : 08091<br>
-            Kerala Sub-Section<br>
-            Region 10<br>
-            India<br>
-            info@meaieeesb.org<br>
-            04933-203079
-          </p>
-        </div>
-        <div class="col-lg-3 col-md-3">
-          <h3 class="footer-title">About MEA</h3>
-          <p class="footer-text">
-            <a href='http://web.meaec.edu.in/' target='_blank'>MEAEC</a>, the second self financing engineering college in Malappuram district,
-            is committed to provide excellent and value-based education with a flair for ethics and professionalism.
-            The Management has no motive of making profit from the College but aims at creating a Center of Excellence in Engineering and Technology.
-          </p>
-        </div>
-        <div class="col-lg-3 col-md-3">
           <h3 class="footer-title">Contact Us</h3>
           <p class="footer-text">
             <form action='/submit-form'>
@@ -228,22 +229,31 @@
         </div>
       </div>
     </div>
-    <footer class="row">
-      <!--div class="container-fluid">
-       <p class="col-lg-4">
-        2016 <i class="fa fa-copyright"></i> All Rights Reserved. MEA IEEE Student Branch
+    <footer class="row" id='bottomnav'>
+      <div class="col-lg-4">
+        <p class="navbar-text" style='color:lightblue;font-size:1em;'>
+          2016 <i class="fa fa-copyright"></i> <a href='http://meaieeesb.org' style="color:white" target='_blank'>MEA IEEE Student Branch</a>, All Rights Reserved.
+        </p>
       </div>
-    </footer-->
+      <div class="col-lg-8">
+        <ul class="nav navbar-nav navbar-right" id='footerlinks'>
+          <li><a href='/sitemap'>Sitemap</a></li>
+          <li><a href='http://ias.ieee.org/' target="_blank">IAS.IEEE.org</a></li>
+          <li><a href='http://www.ieee.org/' target="_blank">IEEE.org</a></li>
+          <li><a href='http://ieeexplore.ieee.org/' target="_blank">IEEE Xplore Digital Library</a></li>
+          <li><a href='http://standards.ieee.org/' target="_blank">IEEE Standards</a></li>
+          <li><a href='http://spectrum.ieee.org/' target="_blank">IEEE Spectrum</a></li>
+          <li><a href='http://www.ieee.org/sitemap' target="_blank">More Sites</a></li>
+        </ul>
+      </div>
     </footer>
     </div>
-    <nav class="navbar navbar-static-bottom">
-        <!-- Brand and toggle get grouped for better mobile display -->
+    <!--nav class="navbar navbarbottom">
         <div class="navbar-header" id='navbottom'>
           <p class="navbar-text" style='color:grey;font-size:1em;'>
             2016 <i class="fa fa-copyright"></i> <a href='http://meaieeesb.org' target='_blank'>MEA IEEE Student Branch</a>, All Rights Reserved.
           </p>
         </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right" id='footerlinks'>
             <li><a href='/sitemap'>Sitemap</a></li>
@@ -254,8 +264,8 @@
             <li><a href='http://spectrum.ieee.org/' target="_blank">IEEE Spectrum</a></li>
             <li><a href='http://www.ieee.org/sitemap' target="_blank">More Sites</a></li>
           </ul>
-        </div><!-- /.navbar-collapse -->
-    </nav>
+        </div>
+    </nav-->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
